@@ -75,7 +75,7 @@ class MonthHeaderTile extends StatefulWidget {
 
 class _MonthHeaderTileState extends State<MonthHeaderTile> {
   /// Useful to tweak how fast background image slides when scrolling.
-  static const double speedCoefficient = 0.5;
+  static const double speedCoefficient = 0.7;
 
   /// Scroll offset at the moment this widget appeared on the screen
   double initOffset;
@@ -91,7 +91,7 @@ class _MonthHeaderTileState extends State<MonthHeaderTile> {
 
   /// Called for each scroll notification event.
   void _handleScroll() {
-    /// Note that this logic is not bulletproof and might need some tweaking.
+    /// Note that this logic is not bulletproof and needs some tweaking.
     /// But hopefully it is good enough to represent the approach.
 
     /// We first get the delta of current scroll offset to our [initOffset].
@@ -122,7 +122,6 @@ class _MonthHeaderTileState extends State<MonthHeaderTile> {
   void initState() {
     super.initState();
     initOffset = widget.controller.offset;
-    print('Init offset for $text is $initOffset');
     viewportSize = widget.controller.position.viewportDimension;
     widget.controller.addListener(_handleScroll);
   }
