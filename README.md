@@ -1,8 +1,6 @@
 # flutter_image_slide_on_scroll
 
-A new Flutter project.
+A new Flutter project.Flutter demo app showing how to make a background image slide during scrolling. Inspired by Google Calendar App view.
 
-## Getting Started
+See `lib/main.dart` for all the details.
 
-For help getting started with Flutter, view our online
-[documentation](http://flutter.io/).
